@@ -10,9 +10,11 @@
 	<body>
 		<div class="page-header">
 			{% if user.is_authenticated %}
+			<!-- {% csrf_token %} -->
 			<a href="{% url 'blog:post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 			<a href="{% url 'polls:index' %}" class="top-menu menu-nav-custom">Polls</a>
 			<a href="{% url 'blog:logout' %}" class="top-menu menu-nav-custom">logout</a>
+			<a style="color: blue;" href="{% url 'blog:userdetail' pk=user.pk %}" class="top-menu menu-nav-custom">Hi {{user}}</a>
 				
 			
 			{% else %}

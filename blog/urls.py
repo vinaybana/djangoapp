@@ -1,4 +1,4 @@
-from django.contrib import admin
+from django.contrib import admin	
 from django.urls import path
 from .import views
 
@@ -13,6 +13,9 @@ urlpatterns = [
 	path('post/<int:pk>/', views.post_detail, name='post_detail'),
 	path('login/',views.login, name="login"),
     path('', views.post_list, name ='post_list'),
+    path('userdetail/<int:pk>/',views.userdetail, name='userdetail'),
+    path('edituser/<int:pk>/', views.edit_profile, name='edit_profile'),
+
 
     
     
