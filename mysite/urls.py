@@ -20,8 +20,6 @@ from blog import views
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from . import settings
-router = routers.DefaultRouter() 
-router.register('post', views.PostViewSet)
 
 
     
@@ -30,7 +28,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/',include('django.contrib.auth.urls')),
     path('', include('blog.urls')),
-    path('api/', include(router.urls)),
+    path('api/', include('blog.apiurls')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 
 
