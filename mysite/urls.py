@@ -29,6 +29,7 @@ urlpatterns = [
     path('blog/',include('django.contrib.auth.urls')),
     path('', include('blog.urls')),
     path('api/', include('blog.apiurls')),
+    path('api/', include('polls.apiurls')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 
 

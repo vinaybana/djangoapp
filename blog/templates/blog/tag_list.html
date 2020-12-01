@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    {% for tag in tags %}
+        <div class="tag">
+            <h2><a href="{% url 'blog:tag_details' slug=tag.slug %}">{{ tag.title }}</a></h2>
+            <p>{{ tag.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}   	

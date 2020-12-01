@@ -15,19 +15,19 @@ class PostViewSet(viewsets.ModelViewSet	):
     queryset = Post.objects.all().order_by('-published_date')
     serializer_class = PostSerializer
     # permission_classes = [permissions.IsAuthenticated] 
-    http_method_names = ['get','post','put','patch']
+    http_method_names = ['get','post','put','patch','delete']
 
 class CategoryViewSet(viewsets.ModelViewSet):
 	queryset = Category.objects.all()
 	serializer_class = CategorySerializer
-	http_method_names = ['get','post','put','patch']
+	http_method_names = ['get','post','put','patch','delete']
 
 class TagViewSet(viewsets.ModelViewSet):
 	queryset = Tag.objects.all()
 	serializer_class = TagSerializer
-	http_method_names = ['get','post','put','patch']
+	http_method_names = ['get','post','put','patch','delete']
 
 class CommentViewSet(viewsets.ModelViewSet):
 	queryset = Comment.objects.all()
 	serializer_class = CommentSerializer
-	http_method_names = ['get','post','put','patch']
+	http_method_names = ['get','post','put','patch','delete']
