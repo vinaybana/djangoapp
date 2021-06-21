@@ -199,7 +199,7 @@ def edit_profile(request, pk):
 		form = ProfileForm()
 	return render(request,'blog/useredit.html', {'form':form})
 
-
+    
 
 
 # Redirect to a success page.
